@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Href Example</title>
+</head>
+
+<body>
+
+    <p><a href="https://www.facebook.com/">Link 1</a></p>
+    <p><a href="https://www.facebook.com/">Link 2</a></p>
+    <p><a href="https://www.facebook.com/">Link 3</a></p>
+
+    <script>
+        function replaceHref(newHref) {
+            var links = document.getElementsByTagName('a');
+
+            for (var i = 0; i < links.length; i++) {
+                links[i].href = newHref;
+            }
+        }
+        var newHrefValue = 'https://www.w3schools.com/js/default.asp';
+        replaceHref(newHrefValue)
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Alert Messages</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+        .button {
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="alert alert-danger" role="alert">
+        <b>Danger!</b>Indicates a dangerous or potenhally negative action.
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true"><i class="fa fa-times" id="close-danger"></i></span>
+        </button>
+    </div>
+    <div class="alert alert-success" role="alert">
+        <b>Success!</b> Indicates a successful or positive action
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true"><i class="fa fa-times" id="close-success"></i></span>
+        </button>
+    </div>
+    <div class="alert alert-info" role="alert">
+        <b>Info!</b>Indicates a neutral informative change or action
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true"><i class="fa fa-times" id="close-info"></i></span>
+        </button>
+    </div>
+    <div class="alert alert-warning" role="alert">
+        <b>Warning!</b>Indicates a warming that might need attention.!
+        <button type="button" class="close" aria-label="Close">
+            <span aria-hidden="true"><i class="fa fa-times" id="close-warning"></i></span>
+        </button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+        integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        document
+            .getElementById("close-danger")
+            .addEventListener("click", function () {
+                $(".alert-danger").hide();
+            });
+        document
+            .getElementById("close-success")
+            .addEventListener("click", function () {
+                $(".alert-success").hide();
+            });
+        document
+            .getElementById("close-info")
+            .addEventListener("click", function () {
+                $(".alert-info").hide();
+            });
+        document
+            .getElementById("close-warning")
+            .addEventListener("click", function () {
+                $(".alert-warning").hide();
+            });
+    </script>
+</body>
+
+</html>

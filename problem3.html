@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .example {
+            width: 400px;
+            height: 30px;
+            background-color: aquamarine;
+            color: green;
+            text-align: center;
+            border: 2px solid black;
+        }
+
+        p.link {
+            width: 400px;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p class="example">This is the first paragraph with class "example".</p>
+        <p class="example">Another paragraph with class "example".</p>
+        <p>This is another paragraph.</p>
+
+        <p><a href="#" class="link">Link with target attribute</a></p>
+        <p><a href="#" class="link">Another link with target attribute</a></p>
+        <h1 class="title">Title 1</h1>
+        <h2 class="title">Title 2</h2>
+        <p><input type="button" value="Change" onclick="changeElements()"></p>
+    </div>
+    <script>
+        function changeElements() {
+            var linkElements = document.querySelectorAll(".link");
+            const list = document.querySelectorAll(".example");
+            const title = document.querySelectorAll(".title");
+
+            list[0].style.cssText = "background-color: yellow; border-color: green;";
+            list[1].style.cssText = "border-color: green;";
+
+
+            linkElements.forEach(link => {
+                link.style.border = "2px solid red";
+                link.style.textDecoration = "none";
+            });
+            title[0].style.cssText = "color: orange";
+            title[1].style.cssText = "color: orange";
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .example {
+            width: 400px;
+            height: 30px;
+            background-color: aquamarine;
+            color: green;
+        }
+
+        p#link {
+            width: 400px;
+            height: 30px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <p class="example">This is the first paragraph with class "example".</p>
+        <p>This is another paragraph.</p>
+        <p><a href="#" id="link">Link with target attribute</a></p>
+        <p><input type="button" value="Change" onclick="changeElements()"></p>
+    </div>
+    <script>
+        function changeElements() {
+            var linkElement = document.getElementById("link");
+            const list = document.querySelectorAll(".example");
+            list[0].style.cssText = "background-color: red; color: yellow;";
+
+            linkElement.style.border = "2px solid red";
+        }
+    </script>
+
+</body>
+
+</html>
